@@ -6,12 +6,12 @@ export default function TransactionList({
   setTransactions,
   setEditingTransaction,
 }) {
-  const handleDelete = async (transaction_id) => {
+  const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this transaction?')) return;
 
     try {
-      await api.delete(`/transactions/${transaction_id}`);
-      setTransactions(transactions.filter((t) => t.transaction_id !== transaction_id));
+      await api.delete(`/transactions/${id}`);
+      setTransactions(transactions.filter((t) => t.id !== id));
     } catch (err) {
       console.error(err);
       alert('Failed to delete transaction');
@@ -55,7 +55,7 @@ export default function TransactionList({
                   <Button
                     variant="danger"
                     size="sm"
-                    onClick={() => handleDelete(t.transaction_id)}
+                    onClick={() => handleDelete(t.id)}
                   >
                     Delete
                   </Button>
