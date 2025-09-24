@@ -13,7 +13,6 @@ export default function TransactionList({
       await api.delete(`/transactions/${id}`);
       setTransactions(transactions.filter((t) => t.id !== id));
     } catch (err) {
-      console.error(err);
       alert('Failed to delete transaction');
     }
   };
