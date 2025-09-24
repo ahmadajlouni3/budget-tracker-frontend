@@ -67,23 +67,10 @@ Make sure to configure this variable in your deployment platform (Netlify, Verce
 
 ---
 
-## 📝 Notes
-
-* This repository only contains the **frontend**.
-* The backend (API + database) is in a **separate repository**.
-* Make sure the backend is running before using the app.
-
----
 
 ## 📦 Deployment
 
 * **Netlify** or **Vercel** for frontend hosting.
 * In your deployment platform, set the environment variable `REACT_APP_API_URL` to point to your backend API.
 
----
 
-## 📄 License
-
-This project is private for now.
-
----
