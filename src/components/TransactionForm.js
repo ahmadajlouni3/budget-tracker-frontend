@@ -41,7 +41,6 @@ export default function TransactionForm({
     try {
       if (editingTransaction) {
         // Update transaction
-        console.log('Editing Transaction:', editingTransaction);
 
         const res = await api.put(`/transactions/${editingTransaction.id}`, payload);
         setTransactions(
